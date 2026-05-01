@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Navigation Styles */
+@layer components {
+    .nav-item {
+        @apply inline-flex items-center px-3 py-2 text-sm font-medium transition-colors duration-300 ease-in-out relative;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .nav-item:not(.active) {
+        @apply text-gray-700 hover:text-indigo-600;
+        background: transparent !important;
+    }
+    
+    .nav-item:not(.active):hover {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    
+    /* Underline effect for non-active items */
+    .nav-item:not(.active)::after {
+        content: '';
+        @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-out;
+        transform: translateX(-50%);
+    }
+    
+    .nav-item:not(.active):hover::after {
+        @apply w-full;
+    }
+    
+    /* Active state with full underline */
+    .nav-item.active {
+        @apply text-indigo-600;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    
+    .nav-item.active::after {
+        content: '';
+        @apply absolute bottom-0 left-1/2 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500;
+        transform: translateX(-50%);
+    }
+    
+    /* Override any existing nav-link styles */
+    a.nav-item {
+        border: none !important;
+        border-bottom: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    a.nav-item:hover {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+    
+    a.nav-item:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+        border-radius: 0.25rem;
+        background: transparent !important;
+    }
+    
+    /* Backdrop blur support */
+    @supports (backdrop-filter: blur(12px)) {
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+        }
+    }
+    
+    /* Smooth transitions for dropdowns */
+    .dropdown-enter {
+        @apply transition-all duration-200 ease-out transform;
+    }
+    
+    .dropdown-enter-from {
+        @apply opacity-0 scale-95;
+    }
+    
+    .dropdown-enter-to {
+        @apply opacity-100 scale-100;
+    }
+    
+    /* Custom scrollbar for dropdown menus */
+    .dropdown-content {
+        scrollbar-width: thin;
+        scrollbar-color: #e5e7eb #f9fafb;
+    }
+    
+    .dropdown-content::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .dropdown-content::-webkit-scrollbar-track {
+        @apply bg-gray-50 rounded-full;
+    }
+    
+    .dropdown-content::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 rounded-full hover:bg-gray-400;
+    }
+}
+
+/* Animation for notification badge */
+@keyframes pulse-notification {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.notification-pulse {
+    animation: pulse-notification 2s infinite;
+}
+
+/* Hover effects for interactive elements */
+.hover-lift {
+    @apply transition-transform duration-200 ease-out;
+}
+
+.hover-lift:hover {
+    @apply transform -translate-y-0.5;
+}
