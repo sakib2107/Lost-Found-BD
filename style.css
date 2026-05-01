@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(227, 221, 221);
+}
+.navbar{
+    height: 60px;
+    background-color: white;
+    font-size: 20px;
+    color:rgb(39, 37, 37);
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    align-items: center;
+    font-weight: 700;
+    justify-content: space-evenly;
+    
+   
+}
+.nav-box1
+{
+    width:200px;
+}
+.nav-icon{
+    display: flex; 
+}
+.nav-icon i{
+    color:red;
+    font-size: 20px;
+}
+.border{
+    border: 2px solid transparent;
+}
+.border:hover{
+    border:2px solid rgb(243, 129, 129)
+}
+
+.search-input{
+    border-radius: 20px;
+    height: 20px;
+    width:200px;
+}
+.nav-box2:hover
+{
+    border:2px solid rgb(243, 129, 129)
+}
+
+.nav-box3{
+       font-size: 20px;
+       color:rgb(14, 14, 47);
+       margin-left: 10px;
+
+}
+
+.home{
+    font-size: 10px;
+    font-weight:800;
+}
+.profile-pic
+{
+     background-image: url("my_picture_1.jpg");
+     height: 35px;
+     width: 35px;
+     background-size: cover;
+     border-radius: 50%;
+     margin-left: 50px;
+
+}
+.user-name{
+    font-size: 10px;
+    font-weight:800;
+    margin-left: 20px;
+}
+
+.message{
+    font-size: 10px;
+    font-weight:800;
+}
+.nav-box4 {
+    margin-left: 10px;
+}
+.nav-box5 {
+      margin-left: 10px;
+}
+.nav-box4 i{
+     margin-left: 5px;
+
+}
+.nav-box5 i{
+     margin-left: 5px;
+}
+.nav-box6{
+    display: flex;
+    align-items: center;
+}
+.notification{
+    font-size: 10px;
+    font-weight:800;
+}
+.btn{
+    background-color:rgb(8, 8, 91);
+    color:white;
+    padding:5px;
+    border-radius: 20px;
+}
+.nav-box61
+{
+    margin-left:20px;
+}
+.all-icon{
+    display: flex;
+}
+.all-icon{
+    width:50%;
+    justify-content: center;
+}
+
+
+.main{
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+    background-color: white;
+    display: flex;
+
+}
+
+.lost-item{
+
+    height:100%;
+    width: 50%;
+    background-color: White;
+
+}
+.lost-item h2{
+    text-align: center;
+}
+.found-item h2{
+    text-align: center;
+}
+
+
+.found-item{
+
+    height:100%;
+    width: 50%;
+    background-color: white;
+
+}
+.post
+{
+    height: 500px;
+    width:70%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    background-color: White;
+    border: 1px solid black;
+}
+.image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.profile
+{
+     background-image: url("my_picture_1.jpg");
+     height: 35px;
+     width: 35px;
+     background-size: cover;
+     border-radius: 50%;
+     border: 2px solid black ;
+
+}
+.user
+{
+    display: flex;
+}
+.user-name{
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.caption{
+    margin-left:15px;
+    margin-top: 5px;
+}
